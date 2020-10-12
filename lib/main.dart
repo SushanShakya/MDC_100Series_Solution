@@ -8,7 +8,20 @@ class PracticeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Practice App",
-      home: Home(),
+      initialRoute: '/home',
+      onGenerateRoute: _getRoute,
     );
   }
+}
+
+Route<dynamic> _getRoute(RouteSettings settings) {
+  if (settings.name != '/home') {
+    return null;
+  }
+
+  return MaterialPageRoute<void>(
+    settings: settings,
+    builder: (BuildContext context) => Home(),
+    fullscreenDialog: true,
+  );
 }
