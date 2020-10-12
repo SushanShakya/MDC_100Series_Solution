@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mdc_102/Constants/themes.dart';
 import 'package:mdc_102/Screens/home.dart';
 
 void main() => runApp(PracticeApp());
@@ -8,6 +9,7 @@ class PracticeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Practice App",
+      theme: AppTheme.lightTheme(),
       initialRoute: '/home',
       onGenerateRoute: _getRoute,
     );
