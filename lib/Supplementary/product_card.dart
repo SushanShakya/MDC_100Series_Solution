@@ -17,7 +17,10 @@ class ProductCard extends StatelessWidget {
         decimalDigits: 0, locale: Localizations.localeOf(context).toString());
     final ThemeData theme = Theme.of(context);
 
-    final imageWidget = Image.asset("assets/diamond.png");
+    final imageWidget = Image.asset(
+      "assets/${product.assetName}",
+      fit: BoxFit.fitWidth,
+    );
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
