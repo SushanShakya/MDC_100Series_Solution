@@ -30,6 +30,8 @@ dependencies:
   cupertino_icons: ^1.0.0
   shrine_images: ^1.1.1
   intl: ^0.15.6
+  flutter_facebook_login: ^3.0.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

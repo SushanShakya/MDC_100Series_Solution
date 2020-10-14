@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mdc_102/Supplementary/cut_corners_border.dart';
 
 import 'colors.dart';
 
@@ -22,6 +23,10 @@ class AppTheme {
         cardColor: kShrineBackgroundWhite,
         textSelectionColor: kShrinePink100,
         errorColor: kShrineErrorRed,
+        inputDecorationTheme: InputDecorationTheme(
+            border: CutCornersBorder(),
+            focusedBorder: CutCornersBorder(
+                borderSide: BorderSide(color: kShrineBrown900, width: 2.0))),
         textTheme: _buildShrineTextTheme(base.textTheme),
         primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
         accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
